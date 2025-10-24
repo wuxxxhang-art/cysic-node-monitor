@@ -1,0 +1,16 @@
+[Unit]
+Description=Cysic Node Monitor
+After=network.target
+
+[Service]
+User=youruser
+WorkingDirectory=/path/to/cysic-node-monitor
+ExecStart=/path/to/cysic-node-monitor/venv/bin/python /path/to/cysic-node-monitor/monitor.py --config /path/to/cysic-node-monitor/config.toml
+Restart=always
+RestartSec=5
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=cysic-node-monitor
+
+[Install]
+WantedBy=multi-user.target
