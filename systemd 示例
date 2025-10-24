@@ -1,0 +1,3 @@
+sudo systemctl daemon-reload
+sudo systemctl enable --now cysic-node-monitor
+sudo journalctl -u cysic-node-monitor -f
