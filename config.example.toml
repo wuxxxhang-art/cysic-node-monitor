@@ -1,0 +1,8 @@
+# 示例配置文件
+# 可复制为 config.toml 并根据需要修改
+
+interval = 30            # 采样间隔（秒）
+log_path = "monitor.log" # 输出日志文件
+json_output = false      # 是否同时输出 json 格式文件（monitor-YYYYMMDD.json）
+process_name = "cysicd"  # 要监控的进程名（或空字符串）
+process_pid = 0          # 或者直接设置 PID（优先于 process_name）
